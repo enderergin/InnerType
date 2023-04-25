@@ -28,11 +28,11 @@ namespace InnerType
 
             x1.Musteriadresleri[0].adres();
 
-            x1.MusteriSiparisBilgileri[0] = new MusteriSiparisBilgisi()
+            x1.MusteriSiparisBilgileri[0] = new MusteriSiparisBilgisi() // önce sipariş bilgisini oluştumak gerekiyorki MusteriSiparisBilgileri class'nın içindeki 'urunler' dizisine gidebilmelisin
             {
-                siparisno = "12321"
+                siparisno = "12321" //MusteriSiparisBilgileri Class'ının içinde bir tane değer atamalısınki aşşağıdaki 'urunler' diziside çalışabilsin.Yoksa classın içinde önce metota giriyor ve metotun üstündeki diziyi okumuyor
             };
-            x1.MusteriSiparisBilgileri[0].urunler[0] = new urun()
+            x1.MusteriSiparisBilgileri[0].urunler[0] = new urun() //fieldın gideceği yeri tamamını belirtmelisin
             {
                 fiyat = 10000,
                 tanim = "telefon",
